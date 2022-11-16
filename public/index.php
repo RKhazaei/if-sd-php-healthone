@@ -38,21 +38,13 @@ switch ($params[1]) {
 
     case 'fietsen':
         echo '<h1>FIETSEN</h1>';
-        try {
-            $db = new PDO("mysql:host=localhost;dbname=fietsenmaker", "root","");
-            $query= $db->prepare("SELECT * FROM fietsen");
-            $query->execute();
-            $result = $query->fetchAll(PDO::FETCH_ASSOC);
-            $num=1;
-            foreach ($result as &$data) {
+        $fietsen=getFietsen();
+        include_once "../Templates/fietsen.php";
+        break;
 
-                echo "<a href='details.php?id=" . $data['id'] . "'>" ."</a>";
-                echo $data["merk"]. " ". $data["type"];
-                echo "<br>";
-            }
-        } catch (PDOException $e) {
-            die("Error!:" . $e->getMessage());
-        }
+    case 'details':
+        $sult=getFiets($params[2]);
+        include_once "../Templates/details.php";
         break;
 
     case 'login':
