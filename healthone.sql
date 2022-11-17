@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 09 nov 2021 om 14:47
--- Serverversie: 10.4.6-MariaDB
--- PHP-versie: 7.3.9
+-- Gegenereerd op: 17 nov 2022 om 12:57
+-- Serverversie: 10.4.24-MariaDB
+-- PHP-versie: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,9 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `healthone`
 --
-DROP DATABASE IF EXISTS `healthone`;
-CREATE DATABASE IF NOT EXISTS `healthone` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `healthone`;
 
 -- --------------------------------------------------------
 
@@ -43,13 +39,14 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `picture`, `description`) VALUES
-(1, 'Roeitrainer', 'categories/roeitrainer.jpg', 'Een roeitrainer is een fitnessapparaat waarmee je het hele lichaam traint. Met een roeitrainer, ook wel roeitoestel of roeimachine, genoemd, boots je de roeibeweging op het water na. Je hebt daarbij voornamelijk je armen, benen en rugspieren nodig, waardoor het een complete workout is. Roeiapparaten zijn er in vele soorten en prijsklassen. '),
-(2, 'Crosstrainer', 'categories/crosstrainer.jpg', 'Een crosstrainer is een fitnessapparaat waarmee je jouw hele lichaam traint. Je maakt namelijk een beweging met zowel je benen als je armen. Daarnaast train je ook de spieren in je core (buik en onderrug), borst, rug en schouders. Zowel in sportscholen als bij thuisgebruik zijn crosstrainers (ook wel elliptical machine genoemd) al geruime tijd een van de populairste fitnessapparaten.'),
-(3, 'Hometrainer', 'categories/hometrainer.jpg', '\r\nEen hometrainer is het meest bekende fitnessapparaat voor thuisgebruik en staat ook wel bekend als fitness fiets. Wat is er nu prettiger dan thuis op je gemak te kunnen werken aan je conditie? Met een hometrainer kun je eenvoudig meerdere spiergroepen trainen en je uithoudingsvermogen verbeteren. Daarnaast bepaal je zelf het tempo, het trainingsniveau en het tijdstip van je training.'),
-(4, 'Loopband', 'categories/loopband.jpg', 'Een loopband is een veelzijdig fitnessapparaat. Een loopband wordt gebruikt om conditie te verbeteren en vetpercentage te verlagen, maar kan ook ingezet worden voor revalidatie. Het voordeel van een loopband is dat je thuis kunt trainen wanneer het jou uitkomt. Heb je er genoeg van om ‘s avonds in het donker of door weer en wind te lopen, of zou je je spieren, pezen en botten willen ontlasten tijdens het (hard)lopen? Dan is een loopband voor jou de beste oplossing!');
+(1, 'fysieke kunst', 'icons/canvas.png', 'Beksiński\'s schilderij uit de jaren zeventig, onofficieel getiteld Kruipende dood (Pełzająca Śmierć), dient als een opmerkelijk voorbeeld; een donker wezen met een bebloede, verbonden kop kruipt op handen en voeten door een verwoest stadsbeeld, bezaaid met vlammende structuren. De scène nodigt zowel afkeer als interesse uit, angst en nieuwsgierigheid.'),
+(2, 'game art', 'icons/game.png', 'Scorn is een biopunk first-person shooter geïnspireerd op het werk van H.R. Giger en Zdzisław Beksiński. Het \'biopunk\'-concept is nauw verwant aan hun biomechanische en surrealistische kunstwerken, die beide algemeen worden erkend als het om het genre gaat. Biopunk zelf is een subgenre van sciencefiction en cyberpunk, een genre dat zich meer richt op de gevolgen van biotechnologie dan op de onmiddellijke voordelen.'),
+(3, 'digital art', 'icons/digital-art.png', 'Een surrealistische schilder, een persoon die ongevoelig is voor oorlog en tragedie, een bekroond kunstenaar, een creatieve fotograaf en een moordslachtoffer; deze beschrijvingen zijn allemaal van toepassing op één man: Zdzislaw Beksinski. De in Polen geboren kunstenaar heeft zijn hele leven eindeloze hoeveelheden pijn en lijden doorgemaakt, van de wereldoorlog tot zelfmoord en kanker. Het leven door zoveel ontberingen kan sommigen verslaan, maar Zdzislaw Beksinski was in staat om zijn pijn in zijn kunstwerken te kanaliseren en honderden prachtige schilderijen en geïnspireerde fans achter te laten.'),
+(4, 'fan art', 'icons/fan.png', 'Als we in het donker van de vroege ochtend op onze fiets stappen om de trein naar school te halen, of als we in onze auto gaan zitten om naar ons werk te gaan, gebeurt er niet veel behalve de realiteit van de buitenwereld. Niets bijzonders. In zulke gevallen zouden we kunnen vergeten dat er meer is dan dat.');
 
--- --------------------------------------------------------
-
+--
+-- Indexen voor geëxporteerde tabellen
+--
 
 --
 -- Indexen voor tabel `category`
@@ -57,10 +54,17 @@ INSERT INTO `category` (`id`, `name`, `picture`, `description`) VALUES
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
+--
+-- AUTO_INCREMENT voor geëxporteerde tabellen
+--
 
 --
 -- AUTO_INCREMENT voor een tabel `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
